@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class load{
+    void clac(int a,int b){
+        int c=a+b;
+        System.out.println("sum="+c);
+    }
+    void clac(int a){
+        int c=a*a;
+        System.out.println("square="+c);
+    }
+}
+class Main{
+     public static void main (String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("number1");
+        int x=s.nextInt();
+        System.out.println("number2");
+        int y=s.nextInt();
+        load ob=new load();
+        ob.clac(x,y);
+        ob.clac(x);
+    }
+}
