@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class Myexcep extends Exception{
+    public Myexcep(String s){
+        System.out.println(s);
+    }
+}
+
+class Mark{
+    
+    int m;
+    
+    void read(){
+        try{
+             Scanner Myob=new Scanner(System.in);
+             System.out.println("enter mark of the student");
+             m=Myob.nextInt();
+             result(m);
+        }catch(Myexcep e){
+         System.out.println(e.getMessage());
+    } 
+    }
+     static void result(int m)throws Myexcep{
+        if(m<50){
+            throw new Myexcep("FAILED");
+        }
+        else{
+            System.out.println("PASS");
+        }
+    }
+}
+
+class Main{
+    public static void main(String []args){
+        Mark ob=new Mark();
+        Scanner z=new Scanner(System.in);
+        System.out.println("enter the limit");
+        int x=z.nextInt();
+        for(int i=1;i<=x;i++){
+            ob.read();
+        }
+    }
+}
+
+
