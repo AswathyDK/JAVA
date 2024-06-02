@@ -1,0 +1,45 @@
+import java.util.Scanner;
+interface Aritha{
+    void read();
+    void calc();
+}
+
+class square implements Aritha{
+    int n;
+    Scanner s=new Scanner(System.in);
+   public void read(){
+        System.out.println("enter the number");
+         n=s.nextInt();
+        
+        
+    }
+   public void calc(){
+        int r=n*n;
+        System.out.println("square="+r);
+    }
+}
+class add implements Aritha{
+    int n;
+    Scanner s1=new Scanner(System.in);
+   public void read(){
+        System.out.println("enter the number");
+         n=s1.nextInt();
+        
+    }
+    public void calc(){
+        int r=n+n;
+      System.out.println("sum="+r);
+    }
+}
+class Main{
+    public static void main(String []args){
+        square ob1=new square();
+        ob1.read();
+        ob1.calc();
+        
+        add ob2=new add();
+        ob2.read();
+        ob2.calc();
+    }
+}
+
